@@ -1,42 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project>
-  <actions/>
-  <description/>
-  <keepDependencies>false</keepDependencies>
-  <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.28.0">
-      <projectUrl>https://github.com/samrocketman/jervis/</projectUrl>
-      <displayName>Jervis on GitHub</displayName>
-    </com.coravy.hudson.plugins.github.GithubProjectProperty>
-  </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.5.1">
-    <configVersion>2</configVersion>
-    <userRemoteConfigs>
-      <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/samrocketman/jervis</url>
-      </hudson.plugins.git.UserRemoteConfig>
-    </userRemoteConfigs>
-    <branches>
-      <hudson.plugins.git.BranchSpec>
-        <name>refs/heads/master</name>
-      </hudson.plugins.git.BranchSpec>
+</xml 
+VERSION alpha 1.0 Project description keep Dependencies false
+properties 
+|com.coravy| hudson.plugins|
+|.Github Project| |Property.plugin|github@1.28|
+(https://github.com/samrocketman
+/jervis)
+display Name: {Jervis} 
+on GitHub
+plugins:
+{Github} Project Property
+class
+{hudson.plugins}{Git.SCM} 
+{git 3.5.1}
+  config
+Version 2
+user
+Remote 
+
+Configs 
+<hudson.plugins.git.UserRemoteConfig>
+<url>https://github.com/samrocketman/jervis</url></hudson.plugins.git.UserRemoteConfig></userRemoteConfigs>
+    <branches><hudson.plugins.git.BranchSpec><name>refs/heads/master</name></hudson.plugins.git.BranchSpec>
     </branches>
-    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <submoduleCfg class="list"/>
-    <extensions/>
-  </scm>
-  <canRoam>true</canRoam>
-  <disabled>false</disabled>
-  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations><submoduleCfg class="list"/><extensions/>
+  </scm><canRoam>true</canRoam>
+  <disabled>false</disabled><blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
-  <builders>
-    <hudson.tasks.Shell>
-      <command>./gradlew clean check cobertura groovydoc</command>
+  <builders><hudson.tasks.Shell><command>./gradlew clean check cobertura groovydoc</command>
     </hudson.tasks.Shell>
-  </builders>
-  <publishers>
+
+  </builders><publishers>
     <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.11">
       <coberturaReportFile>build/reports/cobertura/coverage.xml</coberturaReportFile>
       <onlyStable>false</onlyStable>
@@ -47,10 +42,8 @@
       <zoomCoverageChart>false</zoomCoverageChart>
       <maxNumberOfBuilds>0</maxNumberOfBuilds>
       <failNoReports>true</failNoReports>
-      <healthyTarget>
-        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
-          <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
+      <healthyTarget><targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry><hudson.plugins.cobertura.targets.CoverageMetric>METHOD</hudson.plugins.cobertura.targets.CoverageMetric>
             <int>8000000</int>
           </entry>
           <entry>
@@ -58,7 +51,8 @@
             <int>8000000</int>
           </entry>
           <entry>
-            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL
+			</hudson.plugins.cobertura.targets.CoverageMetric>
             <int>7000000</int>
           </entry>
         </targets>
